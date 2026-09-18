@@ -3,3 +3,54 @@
     padding: 0px;
 }
 
+@font-face {
+    font-family: FiraCode;
+    src: url(../assets/FiraCode-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url(../assets/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    margin-right: 180px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.mainButtons ul{
+    display: flex;
+    gap: 45px;
+    font-family: DMSans;
+}
+
+.socialButtons ul {
+    display: flex;  
+    gap: 13px;
+}
+
+.mainButtons a{
+    color: #666666;
+}
+
+.logo {
+    margin-right: 300px;
+    margin-left: 190px;
+    font-family: FiraCode;
+    font-size: 28px;
+      background: -webkit-linear-gradient(360deg, #13B0F5, #CA24B4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
