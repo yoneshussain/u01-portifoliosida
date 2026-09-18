@@ -13,6 +13,8 @@
     src: url(../assets/DMSans-VariableFont_opsz\,wght.ttf);
 }
 
+/* header & nav placement  */
+
 header {
     display: flex;
     justify-content: space-around;
@@ -53,4 +55,26 @@ header a {
       background: -webkit-linear-gradient(360deg, #13B0F5, #CA24B4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* section & footer placement, style */
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    height: 550px;
+    align-items: center;
+}
+
+section h1 {
+    margin-right: 90px;
+    font-size: 45px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 25px;
+    font-size: 18px;
 }
