@@ -7,59 +7,74 @@
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <a class="logo" href="./index.html"
-        > <strong> {007} <br />
-        yones </strong>
-      </a>
-
-      <nav class="mainButtons">
-        <ul>
-          <li><a href="./index.html">Home </a></li>
-          <li><a href="./pages/about.html">About</a></li>
+    <header class="navbar">
+      <nav class="menu-top">
+        <ul class="logo">
           <li>
-            <a href="./pages/techstack.html">Tech Stack</a>
+            <a class="logo-top" href="./index.html">{007}</a>
           </li>
           <li>
-            <a href="./pages/projects.html">Projects</a>
+            <a class="logo-btm" href="./index.html">yones</a>
           </li>
-          <li><a href="./pages/contact.html">Contact</a></li>
         </ul>
+
+       <input type="image" src="./assets/hamburger.svg" class="hamburger">
       </nav>
 
-      <nav class="socialButtons">
-        <ul>
-          <li>
-            <a href="https://github.com/yoneshussain" target="_blank"
-              ><img src="./assets/githubicon.png" style="height: 23px;" alt="GitHub Profile"
-            /></a>
-          </li>
-          <li>
-            <a href="https://x.com/login" target="_blank"
-              ><img src="./assets/twittericon.png" style="height: 23px;" alt="Twitter Profile"
-            /></a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/yoneshussain" target="_blank"
-              ><img src="./assets/linkedinicon.png" style="height: 23px;" alt="LinkedIn Profile"
-            /></a>
-          </li>
-        </ul>
+      <nav class="menu-mid">
+        <a href="./index.html" class="links">Home </a>
+        <a href="./pages/about.html" class="links">About</a>
+
+        <a href="./pages/techstack.html" class="links">Tech Stack</a>
+
+        <a href="./pages/projects.html" class="links">Projects</a>
+
+        <a href="./pages/contact.html" class="links">Contact</a>
+      </nav>
+
+      <nav class="menu-btm">
+        <a href="https://github.com/yoneshussain" target="_blank"
+          ><img
+            src="./assets/githubicon.png"
+            style="height: 23px"
+            alt="GitHub Profile"
+            class="socials"
+        /></a>
+
+        <a href="https://x.com/login" target="_blank"
+          ><img
+            src="./assets/twittericon.png"
+            style="height: 23px"
+            alt="Twitter Profile"
+            class="socials"
+        /></a>
+
+        <a href="https://linkedin.com/yoneshussain" target="_blank"
+          ><img
+            src="./assets/linkedinicon.png"
+            style="height: 23px"
+            alt="LinkedIn Profile"
+            class="socials"
+        /></a>
       </nav>
     </header>
 
-    <section>
+    <section class="home-info">
       <h1>
-        Hi 👋, <br>
-        My name is <br>
-        <p>Yones </p>
+        Hi 👋, <br />
+        My name is <br />
+        <p>Yones</p>
         I build things for web
       </h1>
 
-      <img src="./assets/pawanmg.jpg" style="height: 300px; width: 300px;" alt="portrait of yones">
+      <img
+        src="./assets/pawanmg.jpg"
+        class="portrait"
+        alt="portrait of yones"
+      />
     </section>
 
-    <footer>
+    <footer class="footer">
       <p>Designed and built by Yones with Love & Coffee</p>
     </footer>
   </body>

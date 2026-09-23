@@ -1,0 +1,91 @@
+:root {
+    --black: #42446E;
+    --blue: #00C0FD;
+    --pink: #E70FAA;
+}
+
+@font-face {
+    font-family: FiraCode;
+    src: url(../assets/FiraCode-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url(../assets/DMSans-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../assets/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-light;
+    src: url(../assets/Poppins-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+            list-style-type: none;
+        text-decoration: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 710px 70px;
+    grid-template-areas: 
+                          "navbar"
+                          "home-info"
+                          "footer";
+
+}
+
+/* navigation bar */
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* logo */
+
+.menu-top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    & .logo {
+        opacity: 0.9;
+        padding: 20px 0px 0px 20px;
+    }
+
+    & .logo-btm {
+        font-size: 12px;
+        padding-left: 5.5px;
+    }
+
+    & .logo a {
+        font-family: FiraCode;
+        font-weight: 700;
+        background-image: linear-gradient(280deg, var(--pink),var(--blue));
+        background-clip: text;
+        color: transparent;
+    }
+
+/* hamburger */
+
+& .hamburger {
+    height: 22px;
+    margin-left: auto;
+    margin-right: 13px;
+    margin-top: 20px;
+}
+
+}
+

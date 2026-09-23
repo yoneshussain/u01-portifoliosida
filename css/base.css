@@ -1,6 +1,7 @@
-* {
-    margin: 0px;
-    padding: 0px;
+:root {
+    --black: #42446E;
+    --blue: #00C0FD;
+    --pink: #E70FAA;
 }
 
 @font-face {
@@ -23,87 +24,105 @@
     src: url(../assets/Poppins-Light.ttf);
 }
 
-/* header & nav placement  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+            list-style-type: none;
+        text-decoration: none;
+}
 
-header {
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 500px 100px;
+    grid-template-areas: 
+                          "navbar"
+                          "home-info"
+                          "footer";
+
+}
+
+/* navigation bar */
+
+.navbar {
+    grid-area: navbar;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    margin-top: 60px;
-    margin-right: 180px;
+
 }
 
-header ul {
-    list-style-type: none;
-}
+/* logo */
 
-header a {
-    text-decoration: none;
-    color: black;
-}
-
-.mainButtons ul{
+.menu-top {
     display: flex;
-    gap: 45px;
-    font-family: DMSans;
+    width: 100%;
+    align-items: center;
+
+    & .logo {
+        opacity: 0.9;
+        padding: 20px 0px 0px 20px;
+    }
+
+    & .logo-btm {
+        font-size: 12px;
+        padding-left: 5.5px;
+    }
+
+    & .logo a {
+        font-family: FiraCode;
+        font-weight: 700;
+        background-image: linear-gradient(280deg, var(--pink),var(--blue));
+        background-clip: text;
+        color: transparent;
+    }
+
+/* hamburger */
+
+& .hamburger {
+    height: 22px;
+    margin-left: auto;
+    margin-right: 13px;
+    margin-top: 20px;
 }
 
-.socialButtons ul {
-    display: flex;  
-    gap: 13px;
 }
 
-.mainButtons a{
-    color: #666666;
+/* Pages */
+
+.menu-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+
+    & .links {
+        font-family: DMSans;
+        color: var(--black);
+        font-weight: 600;
+        font-size: 13px;
+    }
 }
 
-.logo {
-    margin-right: 300px;
-    margin-left: 190px;
-    font-family: FiraCode;
-    font-size: 28px;
-    background: -webkit-linear-gradient(360deg, #13B0F5, #CA24B4);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+/* Socials */
 
-/* section & footer placement, style */
-
-section {
+.menu-btm {
     display: flex;
     justify-content: space-evenly;
-    height: 550px;
     align-items: center;
+    width: 70%;;
+    height: 80px;
 }
 
-section h1 {
-    margin-right: 70px;
-    font-family: Poppins;
-    font-size: 40px;
-    color: #42446E;
+.home-info {
+    grid-area: home-info;
 }
 
-section h1 p {
-    background: linear-gradient(160deg, #13B0F5, #E70FAA);
-    background-clip: text;
-    color: transparent;
+.footer {
+    grid-area: footer;
 }
 
-section img {
-    border: 0px double black;
-    padding: 0.5rem;
-    border-radius: 300px;
-    background-image: linear-gradient(160deg, #13B0F5, #E70FAA);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 25px;
-    font-family: Poppins-light;
-    font-size: 18px;
-    color: #42446E;
+.portrait {
+    width: 150px;
 }
