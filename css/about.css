@@ -2,6 +2,7 @@
     --black: #42446E;
     --blue: #00C0FD;
     --pink: #E70FAA;
+    --gray: #666666;
 }
 
 @font-face {
@@ -30,16 +31,25 @@
     box-sizing: border-box;
             list-style-type: none;
         text-decoration: none;
+    
+        & img {
+            height: 25px;
+        }
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 70px 710px 70px;
+    grid-template-rows: 90px auto auto auto auto;
+    min-height: 100vh;
     grid-template-areas: 
                           "navbar"
-                          "home-info"
+                          "aboutme"
+                          "workexp"
+                          "edu"
                           "footer";
+
+    gap: 20px
 
 }
 
@@ -89,3 +99,210 @@ body {
 
 }
 
+/* PAGE CONTENT */
+/* ABOUT ME */
+
+.aboutme {
+    grid-area: aboutme;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    justify-content: center;
+    height: 100%;
+    gap: 18px;
+
+    & .aboutme-h {
+        font-family: Poppins;
+        font-size: 17px;
+        color: var(--black);
+    }
+
+    & .aboutme-text {
+        font-size: 12px;
+        color: var(--gray);
+        font-family: DMSans;
+    }
+}
+
+/* WORK EXPERIENCE */
+
+.workexp {
+    grid-area: workexp;
+    margin: 10px 20px;
+
+    & .workexp-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 93%;
+    }
+
+    & .workexp-container {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(184, 184, 184, 0.5);
+        padding: 20px 0px;
+    }
+
+    & .workexp-heading {
+        font-size: 17px;
+        font-family: Poppins;
+        color: var(--black);
+        padding-bottom: 8px;
+    }
+
+    & .workexp-title {
+        font-family: DMSans;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--gray);
+        padding-bottom: 10px;
+        opacity: 0.9;
+    }
+
+    & .workexp-icon {
+        height: 13px;
+        padding-right: 7px;
+    }
+    & .icon-text {
+        font-size: 12px;
+        color: var(--gray);
+        font-family: DMSans;
+        opacity: 0.8;
+    }
+
+    & .workexp-right {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .tag-workexp {
+        font-size: 12px;
+        font-family: DMSans;
+        align-self: flex-end;
+        text-align: center;
+        background-color: #E5FDE4;
+        color: #669b64;
+        border-radius: 16px;
+        padding: 5px 8px;
+    }
+
+    & .date-workexp {
+        font-size: 12px;
+        font-family: DMSans;
+        padding-top: 8px;
+        color: var(--gray);
+        align-self: flex-end;
+        white-space:nowrap;
+    }
+
+}
+
+/* EDUCATION */
+
+.edu {
+    grid-area: edu;
+    margin: 0px 20px;
+
+        & .edu-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 93%;
+    }
+
+    & .edu-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(184, 184, 184, 0.5);
+        padding: 20px 0px;
+    }
+
+        & .edu-container2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
+    }
+
+    & .edu-heading {
+        font-size: 17px;
+        font-family: Poppins;
+        color: var(--black);
+        padding-bottom: 8px;
+    }
+
+    & .edu-title {
+        font-family: DMSans;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--gray);
+        padding-bottom: 10px;
+        opacity: 0.9;
+    }
+
+    & .edu-icon {
+        height: 13px;
+        padding-right: 7px;
+    }
+    & .icon-text {
+        font-size: 12px;
+        color: var(--gray);
+        font-family: DMSans;
+        opacity: 0.8;
+    }
+
+    & .edu-right {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .tag-edu {
+        font-size: 12px;
+        font-family: DMSans;
+        align-self: flex-end;
+        text-align: center;
+        background-color: #E5FDE4;
+        color: #669b64;
+        border-radius: 16px;
+        padding: 5px 8px;
+    }
+
+    & .date-edu {
+        font-size: 12px;
+        font-family: DMSans;
+        padding-top: 8px;
+        color: var(--gray);
+        align-self: flex-end;
+        white-space:nowrap;
+    }
+    
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;    
+margin-top: auto;    
+font-size: 11px;
+font-family: DMSans;
+padding-bottom: 23px;
+color: var(--gray);
+opacity: 0.8;
+
+& .footer-name {
+    font-weight: 900;
+}
+
+& .footer-grad {
+            background-image: linear-gradient(180deg, var(--pink),var(--blue));
+        background-clip: text;
+        color: transparent;
+}
+}
