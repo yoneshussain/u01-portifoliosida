@@ -307,6 +307,10 @@ opacity: 0.8;
 }
 }
 
+
+/* MEDIA QUERIES */
+
+
 @media (max-width: 310px) {
     
     .workexp {

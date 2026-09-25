@@ -36,11 +36,13 @@
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 250px 400px;
+    grid-template-rows: 250px auto auto;
+    min-height: 100vh;
     grid-template-areas: 
                           "navbar"
-                          "home-info";
-                          gap: 70px;
+                          "home-info"
+                          "footer";
+                          gap: 20px;
 }
 
 /* navigation bar */
@@ -127,6 +129,9 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
 .home-info {
     grid-area: home-info;
     margin: 20px 0px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .home-text {
@@ -159,3 +164,78 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
     background-clip: padding-box, border-box;
 }
 
+
+/* FOOTER */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;    
+margin-top: auto;    
+font-size: 11px;
+font-family: DMSans;
+padding-bottom: 23px;
+color: var(--gray);
+opacity: 0.8;
+
+& .footer-name {
+    font-weight: 900;
+}
+
+& .footer-grad {
+            background-image: linear-gradient(180deg, var(--pink),var(--blue));
+        background-clip: text;
+        color: transparent;
+}
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 980px) {
+    
+    body {
+    grid-template-rows: 140px auto auto;
+}
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-mid {
+        flex-direction: row;
+        margin-left: auto;
+        gap: 50px;
+        padding-right: 130px;
+
+        & .links {
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .menu-top {
+        width: 0%;
+        margin-left: 50px;
+
+        & .logo-top {
+            font-size: 26px;
+    }
+
+    & .logo-btm {
+        font-size: 17px;
+        padding-left: 12px;
+    }
+    }
+
+    .menu-btm {
+        justify-content: flex-end;
+        width: 0;
+        gap: 10px;
+        margin-right: 120px;
+    }
+    
+}
