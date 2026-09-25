@@ -326,3 +326,120 @@ opacity: 0.8;
     
 }
 }
+
+@media (max-width: 1000px) {
+    
+    .menu-mid {
+        display: none;
+    }
+    
+    .menu-btm {
+        display: none;
+    }
+
+
+}
+
+@media (min-width: 1000px) {
+    
+body {
+    grid-template-columns: 125px 1fr 1fr 1.1fr 1fr 1fr;
+    grid-template-rows: 100px 150px auto auto auto;
+    row-gap: 20px;
+}
+
+.navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        grid-column: 1/-1;
+    }
+
+    .menu-top {
+        width: 0%;
+        margin-left: 100px;
+
+        & .logo-top {
+            font-size: 26px;
+    }
+
+    & .logo-btm {
+        font-size: 17px;
+        padding-left: 12px;
+    }
+    }
+
+.hamburger {
+        display: none;
+}
+
+.menu-mid {
+
+        flex-direction: row;
+        margin-left: auto;
+        gap: 50px;
+        padding-right: 130px;
+
+        & .links {
+            font-size: 17px;
+            font-weight: 500;
+        }
+}
+    .menu-btm {
+        justify-content: flex-end;
+        width: 0;
+        gap: 10px;
+        margin-right: 120px;
+    }
+
+    .aboutme {
+        grid-column: 2 / 5;
+        margin: 0;
+
+        & .aboutme-h {
+            font-size: 27px;
+        }
+
+        & .aboutme-text {
+            font-size: 15px;
+        }
+    }
+
+    .workexp {
+        grid-column: 2/5;
+
+        margin: 0;
+
+        & .workexp-heading {
+            font-size: 27px;
+        }
+
+        & .workexp-info {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-content: center;
+        }
+    }
+
+    .edu {
+        grid-column: 2/5;
+
+        margin: 0;
+
+        & .edu-heading {
+            font-size: 27px;
+        }
+
+        & .edu-info {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-content: center;
+        }
+    }
+
+    .footer {
+        grid-column: 1 / -1;
+    }
+    
+}

@@ -38,6 +38,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 250px auto auto;
     min-height: 100vh;
+    width: 100%;
     grid-template-areas: 
                           "navbar"
                           "home-info"
@@ -143,7 +144,6 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
 .main-text {
     font-size: 21px;
     font-family: Poppins;
-    font-weight: 600;
     color: var(--black);
 }
 
@@ -171,19 +171,19 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
     grid-area: footer;
     display: flex;
     justify-content: center;    
-margin-top: auto;    
-font-size: 11px;
-font-family: DMSans;
-padding-bottom: 23px;
-color: var(--gray);
-opacity: 0.8;
+    margin-top: auto;    
+    font-size: 11px;
+    font-family: DMSans;
+    padding-bottom: 23px;
+    color: var(--gray);
+    opacity: 0.8;
 
 & .footer-name {
     font-weight: 900;
 }
 
 & .footer-grad {
-            background-image: linear-gradient(180deg, var(--pink),var(--blue));
+        background-image: linear-gradient(180deg, var(--pink),var(--blue));
         background-clip: text;
         color: transparent;
 }
@@ -191,35 +191,65 @@ opacity: 0.8;
 
 /* MEDIA QUERIES */
 
-@media (min-width: 980px) {
+
+
+@media (min-width: 700px) {
+
+        .home-info {
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-evenly;
+        padding-bottom: 100px;
+    }
+
+
+    .main-text {
+        font-size: 30px;
+        padding-right: 180px;
+        letter-spacing: -1px;
+        line-height: 40px;
+    }
+
+    .portrait {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+
+@media (min-width: 810px) {
+
+
+    .main-text {
+        font-size: 35px;
+        padding-right: 180px;
+        letter-spacing: -1px;
+        line-height: 45px;
+    }
+
+    .portrait {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+
+@media (min-width: 1000px) {
     
-    body {
+body {
     grid-template-rows: 140px auto auto;
 }
-    .navbar {
+
+.navbar {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .menu-mid {
-        flex-direction: row;
-        margin-left: auto;
-        gap: 50px;
-        padding-right: 130px;
-
-        & .links {
-            font-size: 17px;
-            font-weight: 500;
-        }
-    }
-
-    .hamburger {
-        display: none;
-    }
-
     .menu-top {
         width: 0%;
-        margin-left: 50px;
+        margin-left: 100px;
 
         & .logo-top {
             font-size: 26px;
@@ -231,6 +261,22 @@ opacity: 0.8;
     }
     }
 
+.hamburger {
+        display: none;
+}
+
+.menu-mid {
+
+        flex-direction: row;
+        margin-left: auto;
+        gap: 50px;
+        padding-right: 130px;
+
+        & .links {
+            font-size: 17px;
+            font-weight: 500;
+        }
+}
     .menu-btm {
         justify-content: flex-end;
         width: 0;
