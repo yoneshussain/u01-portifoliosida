@@ -89,6 +89,7 @@ body {
     margin-right: 13px;
     margin-top: 20px;
     filter: brightness(0) saturate(100%) invert(26%) sepia(12%) saturate(1798%) hue-rotate(199deg) brightness(97%) contrast(93%);
+    cursor: default;
 }
 
 }
@@ -145,6 +146,7 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
     font-size: 21px;
     font-family: Poppins;
     color: var(--black);
+        text-shadow: 0px 0px 95px rgb(153, 149, 149);
 }
 
 .text-name{
@@ -162,6 +164,7 @@ filter: brightness(0) saturate(100%) invert(36%) sepia(0%) saturate(2759%) hue-r
     background-image: linear-gradient(160deg, #13B0F5, #E70FAA);
     background-origin: border-box;
     background-clip: padding-box, border-box;
+    box-shadow: 0px 0px 15px rgb(78, 77, 77);
 }
 
 
