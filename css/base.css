@@ -182,7 +182,7 @@ body {
     font-size: 1.1rem;
     font-family: DMSans;
     padding-bottom: 23px;
-    color: var(--gray);
+    color: #525252;
     opacity: 0.8;
 
     & .footer-name {
