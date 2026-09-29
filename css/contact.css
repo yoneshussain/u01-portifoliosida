@@ -29,25 +29,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-            list-style-type: none;
-        text-decoration: none;
-    
-        & img {
-            height: 25px;
-        }
+    list-style-type: none;
+    text-decoration: none;
+
+    & img {
+        height: 25px;
+    }
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 89px ;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    grid-template-areas: 
-                          "navbar"
-                          "footer";
+    grid-template-areas:
+        "navbar"
+        "contact"
+        "footer";
 
     gap: 0px
-
 }
 
 /* navigation bar */
@@ -67,39 +71,50 @@ body {
     width: 100%;
     align-items: center;
 
-    & .logo {
-        opacity: 0.9;
-        padding: 20px 0px 0px 20px;
-    }
-
-    & .logo-btm {
-        font-size: 12px;
-        padding-left: 5.5px;
-    }
-
     & .logo a {
+        font-size: 1.8rem;
         font-family: FiraCode;
         font-weight: 700;
-        background-image: linear-gradient(280deg, var(--pink),var(--blue));
+        background-image: linear-gradient(280deg, var(--pink), var(--blue));
         background-clip: text;
         color: transparent;
     }
 
-/* hamburger */
+    /* hamburger */
 
-& .hamburger {
-    height: 22px;
-    margin-left: auto;
-    margin-right: 13px;
-    margin-top: 20px;
-}
+    & .hamburger {
+        height: 22px;
+        margin-left: auto;
+        margin-right: 13px;
+        margin-top: 20px;
+    }
 
 }
 
 /* PAGE CONTENT */
 /* CONTACT */
 
+.contact {
+    grid-area: contact;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
 
+    & .text {
+        font-size: 2rem;
+        font-family: DMsans;
+        color: var(--black);
+        line-height: 3rem;
+    }
+
+    & .gradient-text {
+        background-image: linear-gradient(350deg, var(--pink), var(--blue));
+        background-clip: text;
+        color: transparent;
+        font-weight: 800;
+    }
+}
 
 
 /* FOOTER */
@@ -107,23 +122,23 @@ body {
 .footer {
     grid-area: footer;
     display: flex;
-    justify-content: center;    
-margin-top: auto;    
-font-size: 11px;
-font-family: DMSans;
-padding-bottom: 23px;
-color: var(--gray);
-opacity: 0.8;
+    justify-content: center;
+    margin-top: auto;
+    font-size: 1.1rem;
+    font-family: DMSans;
+    padding-bottom: 23px;
+    color: var(--gray);
+    opacity: 0.8;
 
-& .footer-name {
-    font-weight: 900;
-}
+    & .footer-name {
+        font-weight: 900;
+    }
 
-& .footer-grad {
-            background-image: linear-gradient(180deg, var(--pink),var(--blue));
+    & .footer-grad {
+        background-image: linear-gradient(180deg, var(--pink), var(--blue));
         background-clip: text;
         color: transparent;
-}
+    }
 }
 
 
@@ -131,11 +146,11 @@ opacity: 0.8;
 
 
 @media (max-width: 1000px) {
-    
+
     .menu-mid {
         display: none;
     }
-    
+
     .menu-btm {
         display: none;
     }
@@ -144,14 +159,14 @@ opacity: 0.8;
 }
 
 @media (min-width: 1000px) {
-    
-body {
-    grid-template-columns: 125px 1fr 1fr 1.1fr 1fr 1fr;
-    grid-template-rows: 100px 150px auto auto auto;
-    row-gap: 20px;
-}
 
-.navbar {
+    body {
+        grid-template-columns: 125px 1fr 1fr;
+        grid-template-rows: 100px 1fr auto;
+        gap: 0px;
+    }
+
+    .navbar {
         flex-direction: row;
         justify-content: space-between;
         grid-column: 1/-1;
@@ -160,22 +175,13 @@ body {
     .menu-top {
         width: 0%;
         margin-left: 100px;
-
-        & .logo-top {
-            font-size: 26px;
     }
 
-    & .logo-btm {
-        font-size: 17px;
-        padding-left: 12px;
-    }
-    }
-
-.hamburger {
+    .hamburger {
         display: none;
-}
+    }
 
-.menu-mid {
+    .menu-mid {
 
         flex-direction: row;
         margin-left: auto;
@@ -183,10 +189,11 @@ body {
         padding-right: 130px;
 
         & .links {
-            font-size: 17px;
+            font-size: 1.7rem;
             font-weight: 500;
         }
-}
+    }
+
     .menu-btm {
         justify-content: flex-end;
         width: 0;
@@ -194,8 +201,17 @@ body {
         margin-right: 120px;
     }
 
+    .contact {
+        grid-column: 1/-1;
+
+        & .text {
+            font-size: 4rem;
+            line-height: 5.5rem;
+        }
+    }
+
     .footer {
         grid-column: 1 / -1;
     }
-    
+
 }
