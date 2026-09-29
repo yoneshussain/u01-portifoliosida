@@ -2,7 +2,7 @@
     --black: #42446E;
     --blue: #00C0FD;
     --pink: #E70FAA;
-    --gray: #666666;
+    --gray: #525252;
 }
 
 @font-face {
@@ -182,7 +182,7 @@ body {
     font-size: 1.1rem;
     font-family: DMSans;
     padding-bottom: 23px;
-    color: #525252;
+    color: var(--gray);
     opacity: 0.8;
 
     & .footer-name {

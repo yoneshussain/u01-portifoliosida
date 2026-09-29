@@ -2,7 +2,7 @@
     --black: #42446E;
     --blue: #00C0FD;
     --pink: #E70FAA;
-    --gray: #666666;
+    --gray: #525252;
 }
 
 @font-face {
@@ -183,7 +183,7 @@ body {
         align-self: flex-end;
         text-align: center;
         background-color: #E5FDE4;
-        color: #669b64;
+        color: #305530;
         border-radius: 16px;
         padding: 5px 8px;
     }
