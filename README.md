@@ -1,5 +1,3 @@
 # Examinationsmoment — U01 Poritoliosida utifrån designskiss
+https://yoneshussain.github.io/u01-portifoliosida/index.html
 ## Reflektion
-
-### Progress:
-![progresspicture](<assets/Screenshot 2026-09-18 at 16.16.34.png>)
